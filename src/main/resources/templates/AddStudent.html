@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Student Add Form</title>
+</head>
+<body>
+
+	<div>
+
+		<fieldset>
+
+			<legend>Add Student Information</legend>
+
+			<form th:action="@{/register}" method="POST">
+
+				<div>
+					<label for="sname">Enter Student Name</label> <input type="text"
+						placeholder="Enter Name" name="name" required>
+				</div>
+				
+				<br>
+				
+				<div>
+					<label for="sname">Enter Student Registration No</label> <input type="text"
+						placeholder="Enter Registration No" name="redgno" required>
+				</div>
+				
+				<br>
+				
+				<div>
+					<label for="sname">Enter Student Address</label> <input type="text"
+						placeholder="Enter Address" name="address"  required>
+				</div>
+				
+				<br>
+				
+				<div>
+					<label for="sname">Enter Student Relation With Guardian</label> <input type="text"
+						placeholder="Enter RelationShip with Student" name="relation"  required>
+				</div>
+				
+				<br>
+
+				<div>
+					<label for="sname">Enter Guardian Name</label> <input type="text"
+						placeholder="Enter Guardian Name" name="guardianName"  required>
+				</div>
+				
+				<br>
+				
+				<input type="submit">
+				
+			</form>
+
+		</fieldset>
+
+
+
+	</div>
+
+</body>
+</html>

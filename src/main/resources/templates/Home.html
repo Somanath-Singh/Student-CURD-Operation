@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<a th:href="@{registerForm}"><button>Add Student</button></a>
+	<br>
+	<br>
+
+	<table border="1" align="center" style="text-align:center;width:100%;">
+
+		<tr>
+			<th>#ID</th>
+			<th>RedgNo</th>
+			<th>Name</th>
+			<th>Address</th>
+			<th>Relation</th>
+			<th>Guardian Name</th>
+			<th colspan="2">Operations</th>
+		</tr>
+
+		<tr th:each="s : ${student}">
+			<td>[[${s.id}]]</td>
+			<td>[[${s.redgno}]]</td>
+			<td>[[${s.name}]]</td>
+			<td>[[${s.address}]]</td>
+			<td>[[${s.relation}]]</td>
+			<td>[[${s.guardianName}]]</td>
+			<td><a th:href="@{${s.redgno}+'/edit'}">Edit</a></td>
+			<td><a th:href="@{${s.id}+'/delete'}">Delete</a></td>
+		</tr>
+
+	</table>
+
+
+
+
+</body>
+</html>
